@@ -12163,9 +12163,10 @@ body {
     position: relative;
     width: 100%;
     height: auto;
-    min-height: 35rem;
-    padding: 15rem 0;
+    min-height: 20rem;
+    padding: 10rem 0;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/bg-masthead.jpeg");
+    /*background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url("../assets/img/bg-masthead.jpeg");*/
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -12178,7 +12179,7 @@ body {
     font-size: 2.5rem;
     line-height: 2.5rem;
     letter-spacing: 0.8rem;
-    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.8));
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
@@ -12220,8 +12221,9 @@ body {
 }
 
 .about-section {
-    padding-top: 10rem;
-    background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
+    padding-top: 5rem;
+    /*background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 100%, rgba(0, 0, 0, 0.7) 100%, rgba(0, 0, 0, 0.6) 100%);*/
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7));
 }
 
 .about-section p {
