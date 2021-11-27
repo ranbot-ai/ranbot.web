@@ -8627,7 +8627,7 @@ fieldset:disabled .btn {
 }
 
 .bg-black {
-    background-color: #000 !important;
+    background-color: rgba(0, 0, 0, .8) !important;
 }
 
 .bg-white {
