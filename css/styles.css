@@ -12330,3 +12330,17 @@ body {
 .footer {
     padding: 5rem 0;
 }
+
+.projects-section .col-lg-6 img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+}
+
+.projects-section .col-lg-6:hover img {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
