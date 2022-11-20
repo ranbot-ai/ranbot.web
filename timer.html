@@ -7,6 +7,7 @@
       }
       body {
         margin: 0;
+        background-color: #f3f3f3;
       }
 
       .flex-container {
@@ -21,26 +22,25 @@
       .row {
         width: auto;
         border: 5px solid tomato;
+        border-radius: 5px;
       }
       .flex-item {
-        background-color: white;
-        padding: 5px;
+        background-color: transparent;
+        padding: 5px 50px;
         width: auto;
-        height: 30px;
         margin: 10px;
-        line-height: 30px;
+        line-height: 6rem;
         color: tomato;
         font-weight: bold;
-        font-size: 2em;
+        font-size: 5rem;
         text-align: center;
       }
-
       #timer {
         color: red;
       }
     </style>
   </head>
-  
+
   <body>
     <div class="flex-container">
       <div class="row">
@@ -100,9 +100,9 @@
       function refreshTimer() {
         document.getElementById('timer').innerText = new Date().format("yyyy-MM-dd hh:mm:ss.SSS")
       };
+
       setInterval(refreshTimer, 500);
       refreshTimer();
     </script>
-
   </body>
 </html>
