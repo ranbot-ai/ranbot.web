@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RanBOT AI Summarizer - RanBOT</title>
+  <meta name="description"
+      content="RanBOT AI Summarizer - is a Chrome Extension that uses OpenAI and GitLab API to summarize a GitLab issue from the issue's URL." />
+  <meta name="author" content="Encore Shao" />
+  <meta name="google-site-verification" content="E-Vd42gzv1-lj9zvFblz0vyjij0REqa9xD3dx0xug5c" />
+
+  <!-- Bulma Version 1-->
+  <link rel="stylesheet" href="https://unpkg.com/bulma@1.0.0/css/bulma.min.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/index.css" />
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+</head>
+
+<body>
+  <!-- Begin Header -->
+  <div class="header-wrapper" id="home">
+    <!-- Begin Hero -->
+    <section class="hero is-large">
+      <!-- Begin Mobile Nav -->
+      <nav class="navbar is-fixed-top is-transparent is-hidden-desktop">
+        <!-- Begin Burger Menu -->
+        <div class="navbar-brand">
+          <div class="navbar-burger burger" data-target="mobile-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <!-- End Burger Menu -->
+        <div id="mobile-nav" class="navbar-menu">
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <a class="navbar-item" href="#settings">
+                Settings
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- End Mobile Nav -->
+      <!-- Begin Hero Content-->
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h2 class="title">RanBOT AI Summarizer</h2>
+          <h1 class="subtitle profession">
+            <a class="has-text-white is-hovered is-underlined" href="https://chromewebstore.google.com/detail/quote-master-customized-e/nhlibemmkidelmnnojcadloiapoboolg" target="_blank">
+              Efficiency Tool
+            </a>
+          </h1>
+          <h1 class="subtitle">
+            A Google Chrome Extension <br />
+            <br />
+            that uses OpenAI and GitLab API <br>
+            to summarize a GitLab issue from the issue's URL.
+          </h1>
+        </div>
+      </div>
+      <!-- End Hero Content-->
+      <!-- Begin Hero Menu -->
+      <div class="hero-foot ">
+        <div class="hero-foot--wrapper">
+          <div class="columns">
+            <div class="column is-12 hero-menu-desktop has-text-centered is-fixed-top">
+              <ul>
+                <li>
+                  <a href="#overview">Overview</a>
+                </li>
+                <li>
+                  <a href="#settings">Settings</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Hero Menu -->
+    </section>
+    <!-- End Hero -->
+  </div>
+  <!-- End Header -->
+
+  <!-- Begin Main Content -->
+  <div class="main-content">
+
+    <!-- End About Me Content -->
+    <div class="section-dark overview" id="overview">
+      <div class="container">
+        <div class="columns is-multiline" data-aos="fade-in" data-aos-easing="linear">
+          <div class="column is-12 about-me">
+            <h1 class="title has-text-centered section-title">
+              Overview
+            </h1>
+          </div>
+
+          <div class="column is-12">
+            <a href="#">
+              <figure class="image is-2by1 work-item"
+                style="background: url('./../quote-master/assets/dashboard.png') no-repeat;"></figure>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Begin Settings Content -->
+    <div class="section-light contact" id="settings">
+      <div class="container">
+        <div class="columns is-multiline" data-aos="fade-in-up" data-aos-easing="linear">
+          <div class="column is-12 about-me">
+            <h1 class="title has-text-centered section-title">
+              Settings
+            </h1>
+          </div>
+          <div class="column is-12">
+            <a href="#">
+              <figure class="image is-2by1"
+                style="background: url('./../quote-master/assets/settings.png') no-repeat;"></figure>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Settings Content -->
+  </div>
+  <!-- End Main Content -->
+
+  <!-- Begin Footer -->
+  <div class=" mt-6">
+    <div class="footer">
+      <p>
+        <strong class="white">
+          RanBOT AI Summarizer
+        </strong>by
+        <a href="https://icmoc.com" class="p-0">
+          Encore Shao
+        </a>
+        -
+        <a href="./privacy.html" class="p-0 white">
+          Privacy Page
+        </a>
+      </p>
+    </div>
+  </div>
+  <!-- End Footer -->
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./../../js/quote-master.js"></script>
+  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      easing: "ease-out",
+      duration: 800,
+    });
+  </script>
+</body>
+
+</html>
