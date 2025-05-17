@@ -12195,7 +12195,6 @@ body {
 
 .masthead h2,
 .masthead .h2 {
-    max-width: 20rem;
     font-size: 1rem;
 }
 
@@ -12223,7 +12222,6 @@ body {
 
     .masthead h2,
     .masthead .h2 {
-        max-width: 30rem;
         font-size: 1.25rem;
     }
 }
