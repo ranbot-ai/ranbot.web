@@ -279,7 +279,7 @@ input[type="email"]:focus, .form-control:focus {
 }
 .hero-subtitle, .masthead h2 {
   font-size: 1.25rem;
-  color: #6e6e73;
+  color: #fff;
   font-weight: 500;
   margin-bottom: 2em;
   line-height: 1.6;
@@ -315,6 +315,7 @@ input[type="email"]:focus, .form-control:focus {
   background: linear-gradient(90deg, #005bb5 0%, #147ce5 100%);
   color: #fff;
   box-shadow: 0 4px 16px rgba(0,113,227,0.13);
+  text-decoration: none;
 }
 
 /* Section Blocks */
