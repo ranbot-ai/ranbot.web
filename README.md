@@ -1,3 +1,3 @@
-# RanBOT.web
+# RanBOT Labs
 
-RanBOT uses AI/ML to transform web content into structured data.
+RanBOT Labs uses AI/ML to transform web content into structured data.

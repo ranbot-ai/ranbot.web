@@ -2,163 +2,111 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>RanBOT AI Summarizer - RanBOT</title>
-  <meta name="description"
-      content="RanBOT AI Summarizer - is a Chrome Extension that uses OpenAI and GitLab API to summarize a GitLab issue from the issue's URL." />
-  <meta name="author" content="Encore Shao" />
-  <meta name="google-site-verification" content="E-Vd42gzv1-lj9zvFblz0vyjij0REqa9xD3dx0xug5c" />
-
-  <!-- Bulma Version 1-->
-  <link rel="stylesheet" href="https://unpkg.com/bulma@1.0.0/css/bulma.min.css" />
-  <link rel="stylesheet" type="text/css" href="./../../css/quote-master.css" />
-  <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="author" content="Encore Shao" />
+    <title>RanBOT Labs AI Summarizer - RanBOT Labs</title>
+    <meta name="description" content="A Chrome Extension that uses OpenAI and GitLab API to summarize a GitLab issue from the issue's URL." />
+    <meta name="keywords" content="GitLab AI Summarizer, Chrome extension, OpenAI, RanBOT Labs">
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="../../css/fontawesome-all.css" rel="stylesheet" />
+    <link href="../../css/product-page.css" rel="stylesheet" />
 </head>
 
-<body>
-  <!-- Begin Header -->
-  <div class="header-wrapper" id="home">
-    <!-- Begin Hero -->
-    <section class="hero is-large">
-      <!-- Begin Mobile Nav -->
-      <nav class="navbar is-fixed-top is-transparent is-hidden-desktop">
-        <!-- Begin Burger Menu -->
-        <div class="navbar-brand">
-          <div class="navbar-burger burger" data-target="mobile-nav">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-        <!-- End Burger Menu -->
-        <div id="mobile-nav" class="navbar-menu">
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <a class="navbar-item" href="#settings">
-                Settings
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <!-- End Mobile Nav -->
-      <!-- Begin Hero Content-->
-      <div class="hero-body">
-        <div class="container has-text-centered">
-          <h2 class="title">RanBOT AI Summarizer</h2>
-          <h1 class="subtitle profession">
-            <a class="has-text-white is-hovered is-underlined" href="https://chromewebstore.google.com/detail/quote-master-customized-e/nhlibemmkidelmnnojcadloiapoboolg" target="_blank">
-              Starter Tool
+<body class="product-page">
+    <!-- Product Nav -->
+    <nav class="product-nav">
+        <div class="product-nav-inner">
+            <a class="product-nav-brand" href="./index.html">
+                <img src="../../assets/img/icon48.png" alt="" style="height:28px;border-radius:6px" />
+                AI Summarizer
             </a>
-          </h1>
-          <h1 class="subtitle">
-            A Google Chrome Extension <br />
-            <br />
-            that uses OpenAI and GitLab API <br>
-            to summarize a GitLab issue from the issue's URL.
-          </h1>
-        </div>
-      </div>
-      <!-- End Hero Content-->
-      <!-- Begin Hero Menu -->
-      <div class="hero-foot ">
-        <div class="hero-foot--wrapper">
-          <div class="columns">
-            <div class="column is-12 hero-menu-desktop has-text-centered is-fixed-top">
-              <ul>
-                <li>
-                  <a href="#overview">Overview</a>
-                </li>
-                <li>
-                  <a href="#settings">Settings</a>
-                </li>
-              </ul>
+            <div class="product-nav-links">
+                <a href="#overview">Overview</a>
+                <a href="#install">Installation</a>
+                <a class="product-nav-back" href="../../index.html">← RanBOT Labs</a>
             </div>
-          </div>
+            <a class="product-nav-cta" href="installation.html">
+                <i class="fas fa-download"></i> Install Guide
+            </a>
         </div>
-      </div>
-      <!-- End Hero Menu -->
+    </nav>
+
+    <!-- Hero -->
+    <header class="product-hero">
+        <h1 class="product-hero-title">RanBOT Labs AI Summarizer</h1>
+        <p class="product-hero-tagline">A Chrome extension that uses OpenAI and GitLab API to summarize a GitLab issue from the issue's URL. Paste a GitLab issue URL and get an AI-powered summary.</p>
+        <a class="product-hero-cta" href="installation.html">
+            <i class="fas fa-book"></i> Installation Guide
+        </a>
+        <img class="product-hero-img" src="./assets/settings.png" alt="AI Summarizer" />
+    </header>
+
+    <!-- Overview -->
+    <section class="product-features" id="overview">
+        <h2 class="product-features-title">Overview</h2>
+        <div class="product-features-grid">
+            <div class="product-feature-card">
+                <h3>OpenAI Integration</h3>
+                <p>Uses OpenAI API to generate concise summaries of GitLab issues.</p>
+            </div>
+            <div class="product-feature-card">
+                <h3>GitLab API</h3>
+                <p>Fetches issue content directly from GitLab.</p>
+            </div>
+            <div class="product-feature-card">
+                <h3>URL-Based</h3>
+                <p>Paste a GitLab issue URL to summarize.</p>
+            </div>
+        </div>
     </section>
-    <!-- End Hero -->
-  </div>
-  <!-- End Header -->
 
-  <!-- Begin Main Content -->
-  <div class="main-content">
-
-    <!-- End About Me Content -->
-    <div class="section-dark overview" id="overview">
-      <div class="container">
-        <div class="columns is-multiline" data-aos="fade-in" data-aos-easing="linear">
-          <div class="column is-12 about-me">
-            <h1 class="title has-text-centered section-title">
-              Overview
-            </h1>
-          </div>
-
-          <div class="column is-12">
-            <a href="#">
-              <figure class="image is-2by1 work-item"
-                style="background: url('./../quote-master/assets/dashboard.png') no-repeat;"></figure>
-            </a>
-          </div>
+    <!-- Screenshots -->
+    <section class="product-showcase" id="screenshots">
+        <div class="product-showcase-item">
+            <div class="product-showcase-img">
+                <img src="../nexus-tab/assets/dashboard.png" alt="Overview" />
+            </div>
+            <div class="product-showcase-content">
+                <h2>How it works</h2>
+                <p>Enter a GitLab issue URL. The extension fetches the issue and sends it to OpenAI for summarization.</p>
+            </div>
         </div>
-      </div>
-    </div>
-
-    <!-- Begin Settings Content -->
-    <div class="section-light contact" id="settings">
-      <div class="container">
-        <div class="columns is-multiline" data-aos="fade-in-up" data-aos-easing="linear">
-          <div class="column is-12 about-me">
-            <h1 class="title has-text-centered section-title">
-              Settings
-            </h1>
-          </div>
-          <div class="column is-12">
-            <a href="#">
-              <img src="./assets/settings.png"></img>
-            </a>
-          </div>
+        <div class="product-showcase-item">
+            <div class="product-showcase-img">
+                <img src="./assets/settings.png" alt="Settings" />
+            </div>
+            <div class="product-showcase-content">
+                <h2>Settings</h2>
+                <p>Configure your OpenAI API key and GitLab settings in the extension options.</p>
+            </div>
         </div>
-      </div>
-    </div>
-    <!-- End Settings Content -->
-  </div>
-  <!-- End Main Content -->
+    </section>
 
-  <!-- Begin Footer -->
-  <div class=" mt-6">
-    <div class="footer">
-      <p>
-        <strong class="white">
-          RanBOT AI Summarizer
-        </strong>by
-        <a href="https://icmoc.com" class="p-0">
-          Encore Shao
-        </a>
-        -
-        <a href="./privacy.html" class="p-0 white">
-          Privacy Page
-        </a>
-      </p>
-    </div>
-  </div>
-  <!-- End Footer -->
+    <!-- Install -->
+    <section class="product-features" id="install">
+        <h2 class="product-features-title">Installation</h2>
+        <div class="product-install">
+            <ol>
+                <li>Clone the repository</li>
+                <li>Open <code>chrome://extensions/</code></li>
+                <li>Enable <strong>Developer mode</strong></li>
+                <li>Click <strong>Load unpacked</strong> and select the project folder</li>
+                <li>Configure OpenAI API key and GitLab settings</li>
+            </ol>
+            <p style="margin-top:1rem"><a href="installation.html">Full installation guide →</a></p>
+        </div>
+    </section>
 
-  <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="./../../js/quote-master.js"></script>
-  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      easing: "ease-out",
-      duration: 800,
-    });
-  </script>
+    <!-- Footer -->
+    <footer class="product-footer">
+        <a href="../../index.html">RanBOT Labs</a> · <a href="./privacy.html">Privacy</a> · <a href="installation.html">Installation</a> · &copy; 2025
+    </footer>
+
+    <script src="../../js/fontawesome-all.js"></script>
 </body>
 
 </html>
