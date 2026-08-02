@@ -52,109 +52,103 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#signup">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section-->
-    <header class="masthead hero" id="about">
+    <header class="hero" id="about">
+        <div class="hero-glass-shape hero-glass-shape--1" aria-hidden="true"></div>
+        <div class="hero-glass-shape hero-glass-shape--2" aria-hidden="true"></div>
+        <div class="hero-glass-shape hero-glass-shape--3" aria-hidden="true"></div>
         <div class="container">
             <h1 class="hero-title">
                 RanBOT Labs
             </h1>
 
             <h2 class="hero-subtitle">
-                RanBOT Labs uses AI/ML to transform web content into structured data.
+                We build AI-powered tools that turn the noisy web into clean, usable data — from browser extensions to open-source toolkits.
             </h2>
 
-            <a class="btn btn-info hero-btn" href="https://chromewebstore.google.com/detail/ranboter/nmdmfikkicpdphdnjgnhogdmeclobfjg">
-                <i class="mx-6 fab fa-chrome"></i> Install RanBOTer Online
+            <a class="btn btn-info hero-btn" href="https://chromewebstore.google.com/detail/ranboter/nmdmfikkicpdphdnjgnhogdmeclobfjg" target="_blank" rel="noopener">
+                <i class="fab fa-chrome"></i> Install RanBOTer
             </a>
 
-            <img class="hero-img" src="assets/img/sales-people.png" alt="RanBOT Labs Hero" />
+            <div class="hero-links">
+                <a href="https://github.com/ranbot-ai/" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                <a href="#products">See the RanBOT family ↓</a>
+            </div>
         </div>
     </header>
 
-    <!-- Products -->
+    <!-- RanBOT Family -->
     <div class="container px-4 px-lg-5" style="max-width: 1100px; margin: 3rem auto 1rem;">
         <p class="products-label">Products</p>
     </div>
-    <section class="section" id="projects">
-        <div class="section-image">
-            <img src="assets/img/sales-company.png" alt="Sales Nav Company Page" />
-        </div>
-        <div class="section-content">
-            <h2><a href="https://viewer.ranbot.online/" target="_blank">RanBOTer: Your AI browsing companion</a></h2>
-            <p class="text-black-50">Faster search & extract data on the web. Easily view normalized data and quickly copy or export data.</p>
-            <p><a href="https://chromewebstore.google.com/detail/ranboter/nmdmfikkicpdphdnjgnhogdmeclobfjg">Install RanBOTer</a> | <a href="https://github.com/encoreshao/github-marketplace">Github Marketplace</a> | <a href="https://github.com/encoreshao/webdata-scraper">Facebook Public Page</a></p>
-        </div>
-    </section>
+    <section id="products">
+        <div class="products-grid">
 
-    <!-- Section 5: RanBOT Labs Platform -->
-    <section class="section" id="ranbot-platform">
-        <div class="section-image">
-            <img src="assets/img/ranbot-platform.png" alt="RanBOT Labs Platform" />
-        </div>
-        <div class="section-content">
-            <h2><a href="https://www.ranbot.online/" target="_blank">RanBOT Labs: AI Web Data Extraction</a></h2>
-            <p class="text-black-50">RanBOT Labs is an AI-powered platform for web data extraction, crawling, and transforming
-                web content into structured data. Automate data collection from any website and make web data accessible and
-                actionable.</p>
-            <p><a href="https://www.ranbot.online/" target="_blank">Visit RanBOT Labs Platform</a></p>
-        </div>
-    </section>
+            <div class="product-card">
+                <img class="product-card-thumb" src="assets/img/sales-company.png" alt="RanBOTer browsing companion" />
+                <h3><a href="https://viewer.ranbot.online/" target="_blank" rel="noopener">RanBOTer</a></h3>
+                <p>Your AI browsing companion. Faster search &amp; extract data on the web — view normalized data and quickly copy or export it.</p>
+                <div class="product-card-links">
+                    <a href="https://chromewebstore.google.com/detail/ranboter/nmdmfikkicpdphdnjgnhogdmeclobfjg" target="_blank" rel="noopener">Install <i class="fas fa-arrow-right"></i></a>
+                    <a href="https://viewer.ranbot.online/" target="_blank" rel="noopener">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
 
-    <!-- Section 3: Nexus Tab -->
-    <section class="section" id="nexus-tab">
-        <div class="section-image">
-            <img src="./projects/nexus-tab/assets/settings.png" alt="Nexus Tab Dashboard" />
-        </div>
-        <div class="section-content">
-            <h2><a href="./projects/nexus-tab/index.html" target="_blank">Nexus Tab: Your Daily Command Center</a></h2>
-            <p class="text-black-50">A Chrome extension that replaces your new tab with a modular productivity dashboard. Glassmorphism cards in a bento grid, customizable widgets (Clock, Search, Tasks, Quick Links, Bookmarks, Notes, Pomodoro, Weather, RSS), and three preset layouts (Focus, Dashboard, Workflow).</p>
-            <p><a href="https://chromewebstore.google.com/detail/quote-master-customized-e/nhlibemmkidelmnnojcadloiapoboolg" target="_blank">Install From Chrome Web Store</a> | <a href="https://github.com/encoreshao/nexus-tab" target="_blank">View on GitHub</a></p>
-        </div>
-    </section>
+            <div class="product-card">
+                <img class="product-card-thumb" src="projects/nexus-tab/assets/settings.png" alt="Nexus Tab dashboard" />
+                <h3><a href="./projects/nexus-tab/index.html" target="_blank">Nexus Tab</a></h3>
+                <p>Your daily command center. Replaces your new tab with a modular productivity dashboard — glassmorphism cards, customizable widgets, and three preset layouts.</p>
+                <div class="product-card-links">
+                    <a href="https://chromewebstore.google.com/detail/quote-master-customized-e/nhlibemmkidelmnnojcadloiapoboolg" target="_blank" rel="noopener">Install <i class="fas fa-arrow-right"></i></a>
+                    <a href="./projects/nexus-tab/index.html" target="_blank">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
 
-    <!-- Bookmark Dashboard -->
-    <section class="section" id="bookmark-dashboard">
-        <div class="section-image">
-            <img src="./projects/bookmark-dashboard/assets/bookmarks.jpg" alt="Bookmark Dashboard" />
-        </div>
-        <div class="section-content">
-            <h2><a href="./projects/bookmark-dashboard/index.html" target="_blank">Bookmark Dashboard: Searchable Bookmark Hub</a></h2>
-            <p class="text-black-50">A clean, modern Chrome extension that replaces your new tab with an organized, searchable bookmark dashboard. Browse bookmarks by folder, search by title or URL, switch between grid and list view, and choose dark or light theme. Optional clock with greeting and customizable display name.</p>
-            <p><a href="https://github.com/encoreshao/bookmark-dashboard" target="_blank" rel="noopener">View on GitHub</a> | <a href="./projects/bookmark-dashboard/index.html" target="_blank">Learn more</a></p>
-        </div>
-    </section>
+            <div class="product-card">
+                <img class="product-card-thumb" src="projects/bookmark-dashboard/assets/bookmarks.jpg" alt="Bookmark Dashboard" />
+                <h3><a href="./projects/bookmark-dashboard/index.html" target="_blank">Bookmark Dashboard</a></h3>
+                <p>A searchable bookmark hub for your new tab. Browse by folder, search by title or URL, switch grid/list view, and pick dark or light theme.</p>
+                <div class="product-card-links">
+                    <a href="https://github.com/encoreshao/bookmark-dashboard" target="_blank" rel="noopener">GitHub <i class="fas fa-arrow-right"></i></a>
+                    <a href="./projects/bookmark-dashboard/index.html" target="_blank">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
 
-    <!-- Section 4: Hot News -->
-    <section class="section" id="hot-news">
-        <div class="section-image">
-            <img src="assets/img/hot-news.png" alt="Hot News Aggregator" />
-        </div>
-        <div class="section-content">
-            <h2><a href="https://hot-news.ranbot.online/" target="_blank">Hot News: Trending Aggregator</a></h2>
-            <p class="text-black-50">Aggregates trending news from Douyin, Bilibili, NetEase News, Baidu Hot Search, and more. Get the latest hot topics quickly, beautifully, and securely.</p>
-            <p><a href="https://hot-news.ranbot.online/" target="_blank">Visit Hot News Online</a></p>
-        </div>
-    </section>
+            <div class="product-card">
+                <img class="product-card-thumb" src="projects/ranbot-ai-summarizer/assets/settings.png" alt="RanBOT AI Summarizer settings" />
+                <h3><a href="./projects/ranbot-ai-summarizer/index.html" target="_blank">RanBOT AI Summarizer</a></h3>
+                <p>A Chrome extension that uses OpenAI and the GitLab API to summarize a GitLab issue straight from its URL.</p>
+                <div class="product-card-links">
+                    <a href="./projects/ranbot-ai-summarizer/index.html" target="_blank">Learn more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
 
-    <!-- Section 6: GitHub Trending Toolkit -->
-    <section class="section" id="github-trending-toolkit">
-        <div class="section-image">
-            <img src="assets/img/github-trending.png" alt="GitHub Trending Toolkit" />
-        </div>
-        <div class="section-content">
-            <h2><a href="https://github.ranbot.online/" target="_blank">GitHub Trending Toolkit</a></h2>
-            <p class="text-black-50">A toolkit for fetching and displaying GitHub Weekly Trending Repositories. Features a Node.js CLI script and a modern React web tool for viewing, exporting (Markdown, JSON, CSV), and copying trending repositories. Open source and customizable.</p>
-            <p>
-                <a href="https://github.ranbot.online/" target="_blank">Visit Live Tool</a> |
-                <a href="https://github.com/ranbot-ai/github-trending" target="_blank">View on GitHub</a>
-            </p>
+            <div class="product-card">
+                <img class="product-card-thumb" src="assets/img/hot-news.png" alt="Hot News Aggregator" />
+                <h3><a href="https://hot-news.ranbot.online/" target="_blank">Hot News</a></h3>
+                <p>Aggregates trending topics from Douyin, Bilibili, NetEase News, Baidu Hot Search, and more — quickly, beautifully, and securely.</p>
+                <div class="product-card-links">
+                    <a href="https://hot-news.ranbot.online/" target="_blank">Visit <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img class="product-card-thumb" src="assets/img/github-trending.png" alt="GitHub Trending Toolkit" />
+                <h3><a href="https://github.ranbot.online/" target="_blank">GitHub Trending Toolkit</a></h3>
+                <p>Fetch and browse GitHub's weekly trending repositories — a Node.js CLI plus a modern React web app for viewing, exporting, and copying results.</p>
+                <div class="product-card-links">
+                    <a href="https://github.ranbot.online/" target="_blank">Visit <i class="fas fa-arrow-right"></i></a>
+                    <a href="https://github.com/ranbot-ai/github-trending" target="_blank">GitHub <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -200,7 +194,7 @@
                             <i class="fas fa-bus text-info mb-2"></i>
                             <h4 class="text-uppercase m-0">Work</h4>
                             <hr class="my-4 mx-auto" />
-                            <div class="small text-black-50">Data & AI</div>
+                            <div class="small text-black-50">Data &amp; AI</div>
                         </div>
                     </div>
                 </div>
@@ -224,23 +218,6 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NPPTFGK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.clouds.min.js"></script>
-    <script>
-        VANTA.CLOUDS({
-          el: "#about",
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: false,
-          minHeight: 200,
-          minWidth: 200,
-          skyColor: 0x0f172a,
-          cloudColor: 0x334155,
-          cloudScale: 0.8,
-          speed: 0.6
-        })
-    </script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J34EKX0755"></script>
