@@ -77,9 +77,12 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(37, 99, 235, 0.06);
 }
 
-/* ===== Hero — Dark, Focused ===== */
+/* ===== Hero — Dark Glassmorphism ===== */
 .hero, .masthead {
-  background: linear-gradient(180deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  background:
+    radial-gradient(circle at 18% 20%, rgba(37,99,235,0.28), transparent 45%),
+    radial-gradient(circle at 82% 78%, rgba(5,150,105,0.20), transparent 42%),
+    linear-gradient(180deg, #0f172a 0%, #1e293b 50%, #334155 100%);
   padding: 6rem 1.5rem 4rem;
   text-align: center;
   min-height: 85vh;
@@ -87,16 +90,30 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: hidden;
 }
 
-/* Hide Vanta for cleaner look — or reduce opacity if you prefer keeping it */
-.hero::before {
-  content: '';
+.hero-glass-shape {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(15,23,42,0.92) 0%, rgba(30,41,59,0.88) 100%);
-  z-index: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
   pointer-events: none;
+  z-index: 0;
+}
+
+.hero-glass-shape--1 { width: 420px; height: 420px; top: -140px; left: -120px; }
+
+.hero-glass-shape--2 {
+  width: 300px; height: 300px; bottom: -100px; right: -80px;
+  background: rgba(37,99,235,0.14); border-color: rgba(37,99,235,0.22);
+}
+
+.hero-glass-shape--3 {
+  width: 180px; height: 180px; top: 28%; right: 10%;
+  background: rgba(5,150,105,0.12); border-color: rgba(5,150,105,0.2);
 }
 
 .hero .container {
@@ -147,13 +164,27 @@ h1, h2, h3, h4, h5, h6 {
   color: #0f172a !important;
 }
 
-.hero-img {
-  margin-top: 2.5rem;
-  max-width: 90%;
-  width: 480px;
-  border-radius: var(--radius-lg);
-  box-shadow: 0 24px 64px rgba(0,0,0,0.3);
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+  position: relative;
+  z-index: 1;
 }
+
+.hero-links a {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.hero-links a:hover { color: #fff; }
 
 /* ===== Products Label ===== */
 .products-label {
@@ -166,99 +197,104 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-/* ===== Sections — Product Cards ===== */
-.section {
-  background: var(--color-surface);
-  border-radius: var(--radius-lg);
-  margin: var(--space-lg) auto;
-  padding: var(--space-xl) var(--space-lg);
+/* ===== Product Family Grid ===== */
+.products-grid {
   max-width: 1100px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--space-xl);
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-sm);
-  transition: box-shadow 0.25s, border-color 0.25s;
+  margin: 0 auto var(--space-xl);
+  padding: 0 var(--space-lg);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
 }
 
-.section:hover {
+.product-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.25s, border-color 0.25s, transform 0.25s;
+}
+
+.product-card:hover {
   box-shadow: var(--shadow-md);
   border-color: rgba(37, 99, 235, 0.15);
+  transform: translateY(-2px);
 }
 
-/* Alternate layout: image right on odd sections */
-.section:nth-child(odd) .section-image {
-  order: 2;
+.product-card-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-md);
+  box-shadow: var(--shadow-sm);
 }
 
-.section-content {
-  flex: 1 1 320px;
-  min-width: 0;
-}
-
-.section-content h2 {
-  font-size: 1.35rem;
+.product-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
   font-weight: 700;
-  margin-bottom: 0.5em;
+  margin: 0 0 0.5em;
 }
 
-.section-content h2 a {
+.product-card h3 a {
   color: var(--color-text);
   text-decoration: none;
   transition: color 0.2s;
 }
 
-.section-content h2 a:hover {
+.product-card h3 a:hover {
   color: var(--color-primary);
 }
 
-.section-content p {
-  font-size: 1rem;
-  line-height: 1.7;
+.product-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
   color: var(--color-text-muted);
-  margin-bottom: 1em;
+  margin: 0 0 1em;
+  flex-grow: 1;
 }
 
 .text-black-50 {
   color: var(--color-text-muted) !important;
 }
 
-.section-content > p:last-of-type a {
+.product-card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em 1.25em;
+  margin-top: auto;
+}
+
+.product-card-links a {
   display: inline-flex;
   align-items: center;
   gap: 0.35em;
   font-weight: 600;
+  font-size: 0.9rem;
   color: var(--color-primary);
   text-decoration: none;
-  margin-right: 1em;
-  margin-bottom: 0.25em;
   transition: color 0.2s;
 }
 
-.section-content > p:last-of-type a:hover {
+.product-card-links a:hover {
   color: var(--color-primary-hover);
   text-decoration: underline;
 }
 
-.section-image {
-  flex: 0 1 360px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@media (max-width: 900px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.section-image img {
-  max-width: 100%;
-  width: 320px;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
-  transition: transform 0.25s, box-shadow 0.25s;
-}
-
-.section-image img:hover {
-  transform: scale(1.02);
-  box-shadow: var(--shadow-lg);
+@media (max-width: 600px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ===== Buttons ===== */
@@ -424,18 +460,8 @@ h1, h2, h3, h4, h5, h6 {
     padding: 5rem 1rem 3rem;
   }
 
-  .section:nth-child(odd) .section-image {
-    order: 0;
-  }
-
-  .section {
-    padding: var(--space-lg) var(--space-md);
-    flex-direction: column;
-  }
-
-  .section-image img {
-    width: 100%;
-    max-width: 280px;
+  .products-grid {
+    padding: 0 var(--space-md);
   }
 
   .signup-section form {
