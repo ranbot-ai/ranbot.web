@@ -197,6 +197,32 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+/* ===== Sections — Base (signup, contact) ===== */
+.section {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  margin: var(--space-lg) auto;
+  padding: var(--space-xl) var(--space-lg);
+  max-width: 1100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-xl);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.25s, border-color 0.25s;
+}
+
+.section:hover {
+  box-shadow: var(--shadow-md);
+  border-color: rgba(37, 99, 235, 0.15);
+}
+
+.section-content {
+  flex: 1 1 320px;
+  min-width: 0;
+}
+
 /* ===== Product Family Grid ===== */
 .products-grid {
   max-width: 1100px;
@@ -462,6 +488,11 @@ h1, h2, h3, h4, h5, h6 {
 
   .products-grid {
     padding: 0 var(--space-md);
+  }
+
+  .section {
+    padding: var(--space-lg) var(--space-md);
+    flex-direction: column;
   }
 
   .signup-section form {
