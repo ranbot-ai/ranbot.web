@@ -94,6 +94,12 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff !important;
 }
 
+.navbar > .container {
+  max-width: 1100px;
+  padding-left: var(--space-lg);
+  padding-right: var(--space-lg);
+}
+
 /* ===== Hero — Light ===== */
 .hero, .masthead {
   background: var(--color-bg);
@@ -366,7 +372,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: var(--space-lg);
 }
 
-.feature-tile i {
+.feature-tile i, .feature-tile svg {
   font-size: 1.5rem;
   color: var(--color-primary);
   margin-bottom: 0.75em;
