@@ -2,16 +2,19 @@
 
 /* ===== Design Tokens ===== */
 :root {
-  --font-heading: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
   --color-bg: #fafafa;
   --color-surface: #ffffff;
   --color-border: #e5e7eb;
   --color-text: #111827;
   --color-text-muted: #6b7280;
-  --color-primary: #2563eb;
-  --color-primary-hover: #1d4ed8;
-  --color-accent: #059669;
+  --color-primary: #23a4ae;
+  --color-primary-hover: #1c838b;
+  --color-tint-1: #c8ebee;
+  --color-tint-2: #a9dde2;
+  --gradient-btn: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-hover) 100%);
+  --gradient-btn-hover: linear-gradient(135deg, var(--color-primary-hover) 0%, var(--color-primary) 100%);
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 20px;
@@ -79,18 +82,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar-nav .nav-link:hover {
   color: var(--color-primary) !important;
-  background: rgba(37, 99, 235, 0.06);
+  background: rgba(35, 164, 174, 0.06);
 }
 
 .navbar-nav .nav-cta {
-  background: var(--color-primary) !important;
+  background: var(--gradient-btn) !important;
   color: #fff !important;
   font-weight: 600 !important;
   margin-left: 0.5rem;
 }
 
 .navbar-nav .nav-cta:hover {
-  background: var(--color-primary-hover) !important;
+  background: var(--gradient-btn-hover) !important;
   color: #fff !important;
 }
 
@@ -102,8 +105,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== Hero — Light ===== */
 .hero, .masthead {
-  background: var(--color-bg);
-  padding: 8rem 1.5rem 4rem;
+  background: linear-gradient(180deg, #ffffff 0%, var(--color-bg) 100%);
+  padding: 9rem 1.5rem 6rem;
   text-align: center;
 }
 
@@ -130,6 +133,14 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
 }
 
+.hero-title-highlight {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-hover) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
 .hero-subtitle {
   font-size: 1.15rem;
   color: var(--color-text-muted);
@@ -154,7 +165,7 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: var(--color-primary);
+  background: var(--gradient-btn);
   color: #fff;
   font-weight: 600;
   font-size: 1rem;
@@ -168,7 +179,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-btn:hover {
   transform: translateY(-1px);
   box-shadow: var(--shadow-lg);
-  background: var(--color-primary-hover);
+  background: var(--gradient-btn-hover);
   color: #fff;
 }
 
@@ -214,11 +225,29 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 640px;
 }
 
-/* ===== Featured Products ===== */
-.featured-products {
+/* Shared full-width-section + constrained-content-column pattern.
+   The section element carries the full-bleed gradient background and
+   vertical padding; .section-inner constrains the content to the same
+   1100px column every other band uses. */
+.section-inner {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 5rem var(--space-lg) 2rem;
+  padding: 0 var(--space-lg);
+}
+
+/* ===== Section Divider ===== */
+.section-divider {
+  width: 100%;
+  height: 1px;
+  border: 0;
+  margin: 0;
+  background: linear-gradient(90deg, transparent 0%, var(--color-border) 15%, rgba(35, 164, 174, 0.35) 50%, var(--color-border) 85%, transparent 100%);
+}
+
+/* ===== Featured Products ===== */
+.featured-products {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #ffffff 0%, var(--color-tint-1) 100%);
 }
 
 .featured-grid {
@@ -238,7 +267,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .featured-card:hover {
   box-shadow: var(--shadow-md);
-  border-color: rgba(37, 99, 235, 0.15);
+  border-color: rgba(35, 164, 174, 0.15);
 }
 
 .featured-card-thumb {
@@ -297,15 +326,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== Use-Case Categories ===== */
 .use-cases {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 2rem var(--space-lg) 5rem;
+  padding: 7rem 0;
+  background: linear-gradient(225deg, var(--color-tint-2) 0%, #ffffff 100%);
 }
 
 .use-case-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-xl);
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
   margin-top: 2.5rem;
 }
 
@@ -353,9 +381,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== Why RanBOT Labs — Features Grid ===== */
 .features {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 2rem var(--space-lg) 5rem;
+  padding: 5.5rem 0;
+  background: linear-gradient(135deg, #ffffff 0%, var(--color-tint-1) 100%);
 }
 
 .features-grid {
@@ -393,12 +420,72 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+/* ===== AI Agents FAQ ===== */
+.faq {
+  padding: 6rem 0;
+  background: linear-gradient(225deg, var(--color-tint-2) 0%, #ffffff 100%);
+}
+
+.faq-list {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  width: 100%;
+}
+
+.faq-item {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+}
+
+.faq-item summary {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.faq-item[open] summary::after {
+  content: '\2212';
+}
+
+.faq-item p {
+  width: 100%;
+  max-width: 100%;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin: 1em 0 0;
+}
+
 /* ===== Final CTA Banner ===== */
 .final-cta {
   max-width: 1100px;
-  margin: 2rem auto 5rem;
-  padding: var(--space-xl) var(--space-lg);
-  background: var(--color-primary);
+  margin: 6rem auto;
+  padding: 4rem var(--space-lg);
+  background: var(--gradient-btn);
   border-radius: var(--radius-lg);
   text-align: center;
 }
@@ -411,21 +498,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .final-cta .hero-btn {
-  background: #fff;
+  background: linear-gradient(135deg, #ffffff 0%, var(--color-tint-1) 100%);
   color: var(--color-primary);
 }
 
 .final-cta .hero-btn:hover {
-  background: #f8fafc;
+  background: linear-gradient(135deg, var(--color-tint-1) 0%, #ffffff 100%);
   color: var(--color-primary-hover);
 }
 
 /* ===== Footer ===== */
 .footer {
-  background: var(--color-bg);
+  background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-tint-2) 100%);
   color: var(--color-text-muted);
   border-top: 1px solid var(--color-border);
-  padding: var(--space-xl) 0 var(--space-lg);
+  padding: 5rem 0 var(--space-lg);
   font-size: 0.9rem;
 }
 
@@ -500,7 +587,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .social a:hover {
-  background: var(--color-primary);
+  background: var(--gradient-btn);
   border-color: var(--color-primary);
   color: #fff;
 }
@@ -514,8 +601,13 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
   .use-case-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .use-case-grid {
     grid-template-columns: 1fr;
-    gap: var(--space-lg);
   }
 }
 
