@@ -11,3 +11,6 @@ coverage/
 pkg/
 tmp/
 log/
+docs/superpowers/
+.superpowers/
+backups/
