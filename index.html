@@ -1,318 +1,581 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="author" content="Encore Shao" />
-    <title>
-        RanBOT Labs | AI tools for the everyday web
-    </title>
-    <meta name="description" content="RanBOT Labs builds small, focused AI-powered tools — browser extensions and open-source toolkits — that turn the noisy web into clean, usable data.">
-    <meta name="keywords" content="RanBOT Labs, Company, Data, AI/ML, Chrome Extensions, Web Data">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <!-- Font Awesome icons (free version)-->
-    <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
-    <link href="css/fontawesome-all.css" rel="stylesheet" />
-    <link href="css/apple-style.css" rel="stylesheet" />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-225038487-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RanBOT Labs | Free open-source AI tools for the everyday web</title>
+  <meta name="description" content="RanBOT Labs is a Shanghai studio that builds 12 free, open-source AI tools — Chrome extensions, web apps, and CLIs — that turn the noisy web into clean, usable data. Start with RanBOTer or NLM Unwatermark." />
+  <meta name="author" content="Encore Shao" />
+  <meta name="creator" content="Encore Shao" />
+  <meta name="publisher" content="RanBOT Labs" />
+  <meta name="keywords" content="RanBOT Labs, RanBOTer, Chrome extension, AI tools, open source, web data extraction, GitHub trending, NLM Unwatermark, NotebookLM, Shanghai" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <meta name="theme-color" content="#070c0d" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <link rel="canonical" href="https://ranbot.online/" />
+  <link rel="alternate" type="text/plain" href="https://ranbot.online/llms.txt" title="LLM-readable site summary" />
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="assets/img/icon48.png" />
 
-      gtag('config', 'UA-225038487-1');
-    </script>
+  <meta name="language" content="en" />
+  <meta http-equiv="content-language" content="en" />
+  <meta name="geo.region" content="CN-SH" />
+  <meta name="geo.placename" content="Shanghai, China" />
+  <meta name="geo.position" content="31.2304;121.4737" />
+  <meta name="ICBM" content="31.2304, 121.4737" />
+  <meta name="coverage" content="Worldwide" />
+  <meta name="distribution" content="global" />
 
-    <!-- Google Tag Manager -->
-    <script>
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})
-        (window,document,'script','dataLayer','GTM-NPPTFGK');
-    </script>
-    <!-- End Google Tag Manager -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="RanBOT Labs" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://ranbot.online/" />
+  <meta property="og:title" content="RanBOT Labs | Free open-source AI tools for the everyday web" />
+  <meta property="og:description" content="12 free AI tools from Shanghai — Chrome extensions, web apps, and CLIs that turn the noisy web into clean, usable data." />
+  <meta property="og:image" content="https://ranbot.online/assets/img/sales-people.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1000" />
+  <meta property="og:image:height" content="625" />
+  <meta property="og:image:alt" content="RanBOT Labs product preview" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@ranbotai" />
+  <meta name="twitter:creator" content="@ranbotai" />
+  <meta name="twitter:title" content="RanBOT Labs | Free open-source AI tools for the everyday web" />
+  <meta name="twitter:description" content="12 free AI tools from Shanghai — Chrome extensions, web apps, and CLIs that turn the noisy web into clean, usable data." />
+  <meta name="twitter:image" content="https://ranbot.online/assets/img/sales-people.png" />
+  <meta name="twitter:image:alt" content="RanBOT Labs product preview" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Red+Hat+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/2026-styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://ranbot.online/#organization",
+        "name": "RanBOT Labs",
+        "alternateName": ["RanBOT", "ranbot-ai"],
+        "url": "https://ranbot.online/",
+        "logo": "https://ranbot.online/assets/img/icon48.png",
+        "image": "https://ranbot.online/assets/img/sales-people.png",
+        "description": "Shanghai studio that builds small, focused, free and open-source AI tools — Chrome extensions, web apps, and CLIs — that turn the noisy web into clean, usable data.",
+        "email": "encore.shao@gmail.com",
+        "foundingDate": "2022",
+        "founder": { "@id": "https://ranbot.online/#founder" },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Shanghai",
+          "addressCountry": "CN"
+        },
+        "areaServed": "Worldwide",
+        "sameAs": [
+          "https://github.com/ranbot-ai/",
+          "https://www.linkedin.com/company/ranbot-ai",
+          "https://x.com/ranbotai"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://ranbot.online/#founder",
+        "name": "Encore Shao",
+        "jobTitle": "Founder",
+        "email": "encore.shao@gmail.com",
+        "url": "https://github.com/encoreshao",
+        "worksFor": { "@id": "https://ranbot.online/#organization" },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Shanghai",
+          "addressCountry": "CN"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://ranbot.online/#website",
+        "url": "https://ranbot.online/",
+        "name": "RanBOT Labs",
+        "description": "Free open-source AI tools for the everyday web.",
+        "inLanguage": "en",
+        "publisher": { "@id": "https://ranbot.online/#organization" }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://ranbot.online/#webpage",
+        "url": "https://ranbot.online/",
+        "name": "RanBOT Labs | Free open-source AI tools for the everyday web",
+        "isPartOf": { "@id": "https://ranbot.online/#website" },
+        "about": { "@id": "https://ranbot.online/#organization" },
+        "inLanguage": "en",
+        "primaryImageOfPage": "https://ranbot.online/assets/img/sales-people.png"
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://ranbot.online/#products",
+        "name": "RanBOT Labs products",
+        "numberOfItems": 12,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "RanBOTer", "url": "https://viewer.ranbot.online/", "description": "AI browsing companion that searches and extracts normalized web data." },
+          { "@type": "ListItem", "position": 2, "name": "Nexus Tab", "url": "https://ranbot.online/projects/nexus-tab/index.html", "description": "Chrome new-tab productivity extension." },
+          { "@type": "ListItem", "position": 3, "name": "Bookmark Dashboard", "url": "https://ranbot.online/projects/bookmark-dashboard/index.html", "description": "Chrome extension for organizing bookmarks." },
+          { "@type": "ListItem", "position": 4, "name": "RanBOT AI Summarizer", "url": "https://ranbot.online/projects/ranbot-ai-summarizer/index.html", "description": "Chrome extension that summarizes GitLab issues with your own OpenAI API key." },
+          { "@type": "ListItem", "position": 5, "name": "Hot News", "url": "https://hot-news.ranbot.online/", "description": "Web app that aggregates trending news." },
+          { "@type": "ListItem", "position": 6, "name": "GitHub Trending Toolkit", "url": "https://github.ranbot.online/", "description": "Node.js CLI and React app for weekly GitHub trending repositories." },
+          { "@type": "ListItem", "position": 7, "name": "Data Graph", "url": "https://data-graph.ranbot.online/", "description": "Web app for graphing extracted data." },
+          { "@type": "ListItem", "position": 8, "name": "AI RSS Reader", "url": "https://rss.ranbot.online/", "description": "AI-assisted RSS reader web app." },
+          { "@type": "ListItem", "position": 9, "name": "PPT Architect", "url": "https://ppt.ranbot.online/", "description": "Web app for building presentations." },
+          { "@type": "ListItem", "position": 10, "name": "Video Recorder", "url": "https://video.ranbot.online/", "description": "Browser video recorder web app." },
+          { "@type": "ListItem", "position": 11, "name": "NLM Unwatermark", "url": "https://github.com/encoreshao/nlm-unwatermark", "description": "Python CLI that removes NotebookLM watermarks from PDF, PPTX, and image exports using computer-vision inpainting." },
+          { "@type": "ListItem", "position": 12, "name": "TikTok Scraper", "url": "https://github.com/ranbot-ai/tiktok-scraper", "description": "Open-source TikTok data scraper." }
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://ranbot.online/#ranboter",
+        "name": "RanBOTer",
+        "applicationCategory": "BrowserApplication",
+        "operatingSystem": "Chrome",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "url": "https://viewer.ranbot.online/",
+        "downloadUrl": "https://chromewebstore.google.com/detail/ranboter/nmdmfikkicpdphdnjgnhogdmeclobfjg",
+        "isAccessibleForFree": true,
+        "publisher": { "@id": "https://ranbot.online/#organization" },
+        "description": "Your AI browsing companion. Faster search and extract data on the web — view normalized data and quickly copy or export it."
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://ranbot.online/#nlm-unwatermark",
+        "name": "NLM Unwatermark",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "macOS, Windows, Linux",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "url": "https://github.com/encoreshao/nlm-unwatermark",
+        "isAccessibleForFree": true,
+        "license": "https://opensource.org/licenses/MIT",
+        "publisher": { "@id": "https://ranbot.online/#organization" },
+        "description": "Removes the NotebookLM watermark from PDF, PPTX, and image exports using computer-vision inpainting so gradients, textures, and slide borders stay intact."
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://ranbot.online/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Are RanBOT Labs' tools free to use?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes, all products are free — no subscriptions or paywalls." }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need an account?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No account needed for most tools. RanBOT AI Summarizer is the one exception — it requires you to configure your own OpenAI API key in the extension settings." }
+          },
+          {
+            "@type": "Question",
+            "name": "Which browsers are supported?",
+            "acceptedAnswer": { "@type": "Answer", "text": "The four extensions (RanBOTer, Nexus Tab, Bookmark Dashboard, RanBOT AI Summarizer) are built for Chrome. Most other products are web apps that work in any modern browser. NLM Unwatermark is a Python CLI for PDF, PPTX, and image files." }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the AI-powered extraction work?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Tools like RanBOTer use AI/ML to parse and normalize raw web content into structured data; RanBOT AI Summarizer calls the OpenAI API directly to summarize GitLab issues." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is RanBOT Labs open source?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes, every product ships with public source on GitHub." }
+          },
+          {
+            "@type": "Question",
+            "name": "Where can I get help or report an issue?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Open an issue on the relevant product's GitHub repo, or reach out via encore.shao@gmail.com." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-225038487-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-225038487-1');
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); })
+      (window, document, 'script', 'dataLayer', 'GTM-NPPTFGK');
+  </script>
+  <!-- End Google Tag Manager -->
 </head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-<body id="page-top">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand" href="#page-top">
-                <img src="assets/img/icon48.png" />
+  <nav class="nav" aria-label="Primary">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#page-top">
+        <img src="assets/img/icon48.png" width="32" height="32" alt="RanBOT Labs" />
+        <span class="brand-name">RanBOT Labs</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <a class="btn btn-primary nav-cta" href="https://chromewebstore.google.com/detail/ranboter/nmdmfikkicpdphdnjgnhogdmeclobfjg" target="_blank" rel="noopener">Install RanBOTer</a>
+
+      <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+      </button>
+    </div>
+    <div class="wrap">
+      <div class="mobile-panel" id="mobile-menu">
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+        <a href="https://chromewebstore.google.com/detail/ranboter/nmdmfikkicpdphdnjgnhogdmeclobfjg" target="_blank" rel="noopener">Install RanBOTer</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <header class="hero" id="page-top">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="badges" aria-label="Highlights">
+            <span class="badge">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1.2 9.9 5.3l4.5.4-3.4 3 1 4.4L8 11.4 3.99 13.1l1-4.4-3.4-3 4.5-.4L8 1.2z"/></svg>
+              Free &amp; open source
+            </span>
+            <span class="badge">12 products</span>
+            <span class="badge">Chrome · web · CLI</span>
+          </div>
+
+          <h1><span class="hero-accent">AI tools</span> for the everyday web</h1>
+          <p class="hero-lead">RanBOT Labs builds small, focused AI-powered tools — from browser extensions to open-source toolkits — that turn the noisy web into clean, usable data.</p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/ranboter/nmdmfikkicpdphdnjgnhogdmeclobfjg" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2zm0 2.2a7.8 7.8 0 0 1 6.66 3.8H12A3.99 3.99 0 0 0 8.2 10.4L5.54 5.8A7.78 7.78 0 0 1 12 4.2zm-7.8 7.8c0-.86.14-1.69.4-2.46L8.2 13.6A4 4 0 0 0 12 16.8c.9 0 1.73-.3 2.4-.8l2.66 4.6A7.8 7.8 0 0 1 4.2 12zm9.8 4.6A4 4 0 0 0 16 12h5.8A7.8 7.8 0 0 1 16.4 19.4L14 16.6z"/></svg>
+              Install RanBOTer
             </a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menu
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto align-items-lg-center">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link nav-cta" href="https://chromewebstore.google.com/detail/ranboter/nmdmfikkicpdphdnjgnhogdmeclobfjg" target="_blank" rel="noopener">Install RanBOTer</a></li>
-                </ul>
-            </div>
+            <a class="btn btn-ghost" href="https://github.com/ranbot-ai/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.35 6.84 9.71.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.1-1.5-1.1-1.5-.9-.64.07-.62.07-.62 1 .07 1.52 1.06 1.52 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 6.84c.85.01 1.71.12 2.51.34 1.9-1.32 2.74-1.05 2.74-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.04 10.04 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/></svg>
+              View on GitHub
+            </a>
+          </div>
         </div>
-    </nav>
 
-    <!-- Hero Section-->
-    <header class="hero" id="about">
-        <div class="container">
-            <p class="hero-tags">Free &amp; open source &middot; Chrome extensions &middot; Built for real workflows</p>
+        <aside class="terminal" aria-label="Product catalog">
+          <div class="terminal-bar">
+            <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            Terminal
+          </div>
+          <pre class="terminal-body"><span class="prompt">$</span> ranbot labs --catalog
 
-            <h1 class="hero-title"><span class="hero-title-highlight">AI tools</span> for the everyday web</h1>
+<span class="dim">Colors</span>
+  <span class="swatch" style="background:#23a4ae"></span>#23a4ae  <span class="dim">primary</span>
+  <span class="swatch" style="background:#187880"></span>#187880  <span class="dim">cta</span>
+  <span class="swatch" style="background:#6fd4db"></span>#6fd4db  <span class="ok">accent</span>
 
-            <h2 class="hero-subtitle">RanBOT Labs builds small, focused AI-powered tools — from browser extensions to open-source toolkits — that turn the noisy web into clean, usable data.</h2>
+<span class="dim">Products</span>  <span class="hi">12</span>
+  ranboter              <span class="ok">extraction</span>
+  nlm-unwatermark       <span class="ok">documents</span>
+  github-trending       <span class="ok">aggregation</span>
+  ppt-architect         <span class="dim">creation</span>
+  <span class="dim">+ 8 more in the catalog below</span>
 
-            <div class="hero-actions">
-                <a class="hero-btn" href="https://chromewebstore.google.com/detail/ranboter/nmdmfikkicpdphdnjgnhogdmeclobfjg" target="_blank" rel="noopener">
-                    <i class="fab fa-chrome"></i> Install RanBOTer
-                </a>
-                <a class="hero-secondary-link" href="https://github.com/ranbot-ai/" target="_blank" rel="noopener">View on GitHub</a>
-            </div>
+<span class="hi">all free</span>  ·  open source  ·  shanghai</pre>
+        </aside>
+      </div>
 
-            <img class="hero-image" src="assets/img/sales-people.png" alt="RanBOT Labs product preview" />
+      <div class="wrap preview" id="about">
+        <div class="preview-frame">
+          <div class="terminal-bar">
+            <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            ranbot.online
+          </div>
+          <img src="assets/img/sales-people.png" alt="RanBOT Labs product preview" />
         </div>
+      </div>
     </header>
 
-    <hr class="section-divider" />
+    <section class="section" id="products">
+      <div class="wrap">
+        <p class="kicker">Featured products</p>
+        <h2>Two of our most popular tools</h2>
 
-    <!-- Featured Products -->
-    <section class="featured-products" id="products">
-        <div class="section-inner">
-            <p class="section-label">Featured Products</p>
-            <h2 class="section-heading">Two of our most popular tools</h2>
-            <div class="featured-grid">
-
-                <div class="featured-card">
-                    <img class="featured-card-thumb" src="assets/img/sales-company.png" alt="RanBOTer browsing companion" />
-                    <h3><a href="https://viewer.ranbot.online/" target="_blank" rel="noopener">RanBOTer</a></h3>
-                    <p>Your AI browsing companion. Faster search &amp; extract data on the web — view normalized data and quickly copy or export it.</p>
-                    <div class="featured-card-links">
-                        <a href="https://chromewebstore.google.com/detail/ranboter/nmdmfikkicpdphdnjgnhogdmeclobfjg" target="_blank" rel="noopener">Install <i class="fas fa-arrow-right"></i></a>
-                        <a href="https://viewer.ranbot.online/" target="_blank" rel="noopener">Learn more <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="featured-card">
-                    <img class="featured-card-thumb" src="assets/img/github-trending.png" alt="GitHub Trending Toolkit" />
-                    <h3><a href="https://github.ranbot.online/" target="_blank" rel="noopener">GitHub Trending Toolkit</a></h3>
-                    <p>Fetch and browse GitHub's weekly trending repositories — a Node.js CLI plus a modern React web app for viewing, exporting, and copying results.</p>
-                    <div class="featured-card-links">
-                        <a href="https://github.ranbot.online/" target="_blank" rel="noopener">Visit <i class="fas fa-arrow-right"></i></a>
-                        <a href="https://github.com/ranbot-ai/github-trending" target="_blank" rel="noopener">GitHub <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
+        <div class="featured-grid">
+          <article class="feature-card">
+            <img src="assets/img/sales-company.png" alt="RanBOTer browsing companion" />
+            <div class="feature-body">
+              <h3><a href="https://viewer.ranbot.online/" target="_blank" rel="noopener">RanBOTer</a></h3>
+              <p>Your AI browsing companion. Faster search &amp; extract data on the web — view normalized data and quickly copy or export it.</p>
+              <div class="feature-links">
+                <a href="https://chromewebstore.google.com/detail/ranboter/nmdmfikkicpdphdnjgnhogdmeclobfjg" target="_blank" rel="noopener">
+                  Install
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </a>
+                <a href="https://viewer.ranbot.online/" target="_blank" rel="noopener">
+                  Learn more
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </a>
+              </div>
             </div>
+          </article>
+
+          <article class="feature-card">
+            <img src="assets/img/github-trending.png" alt="GitHub Trending Toolkit" />
+            <div class="feature-body">
+              <h3><a href="https://github.ranbot.online/" target="_blank" rel="noopener">GitHub Trending Toolkit</a></h3>
+              <p>Fetch and browse GitHub’s weekly trending repositories — a Node.js CLI plus a modern React web app for viewing, exporting, and copying results.</p>
+              <div class="feature-links">
+                <a href="https://github.ranbot.online/" target="_blank" rel="noopener">
+                  Visit
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </a>
+                <a href="https://github.com/ranbot-ai/github-trending" target="_blank" rel="noopener">
+                  GitHub
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
         </div>
+      </div>
     </section>
 
-    <hr class="section-divider" />
+    <section class="section">
+      <div class="wrap">
+        <p class="kicker">What we build</p>
+        <h2>Twelve RanBOT Labs products, grouped by what they do</h2>
 
-    <!-- Use-Case Categories -->
-    <section class="use-cases">
-        <div class="section-inner">
-            <p class="section-label">What We Build</p>
-            <h2 class="section-heading">Eleven RanBOT Labs products, grouped by what they do</h2>
-            <div class="use-case-grid">
-
-                <div class="use-case">
-                    <p class="use-case-number">01</p>
-                    <h3>Browser Productivity</h3>
-                    <ul>
-                        <li><a href="./projects/nexus-tab/index.html" target="_blank">Nexus Tab</a></li>
-                        <li><a href="./projects/bookmark-dashboard/index.html" target="_blank">Bookmark Dashboard</a></li>
-                    </ul>
-                </div>
-
-                <div class="use-case">
-                    <p class="use-case-number">02</p>
-                    <h3>AI-Powered Extraction</h3>
-                    <ul>
-                        <li><a href="https://viewer.ranbot.online/" target="_blank" rel="noopener">RanBOTer</a></li>
-                        <li><a href="./projects/ranbot-ai-summarizer/index.html" target="_blank">RanBOT AI Summarizer</a></li>
-                        <li><a href="https://data-graph.ranbot.online" target="_blank" rel="noopener">Data Graph</a></li>
-                    </ul>
-                </div>
-
-                <div class="use-case">
-                    <p class="use-case-number">03</p>
-                    <h3>Data &amp; Trends Aggregation</h3>
-                    <ul>
-                        <li><a href="https://hot-news.ranbot.online/" target="_blank" rel="noopener">Hot News</a></li>
-                        <li><a href="https://github.ranbot.online/" target="_blank" rel="noopener">GitHub Trending Toolkit</a></li>
-                        <li><a href="https://rss.ranbot.online" target="_blank" rel="noopener">AI RSS Reader</a></li>
-                        <li><a href="https://github.com/ranbot-ai/tiktok-scraper" target="_blank" rel="noopener">TikTok Scraper</a></li>
-                    </ul>
-                </div>
-
-                <div class="use-case">
-                    <p class="use-case-number">04</p>
-                    <h3>Content Creation</h3>
-                    <ul>
-                        <li><a href="https://ppt.ranbot.online/" target="_blank" rel="noopener">PPT Architect</a></li>
-                        <li><a href="https://video.ranbot.online/" target="_blank" rel="noopener">Video Recorder</a></li>
-                    </ul>
-                </div>
-
-            </div>
+        <div class="catalog">
+          <div class="group">
+            <p class="group-num">01</p>
+            <h3>Browser Productivity</h3>
+            <ul>
+              <li><a href="https://ranbot.online/projects/nexus-tab/index.html" target="_blank" rel="noopener">Nexus Tab</a></li>
+              <li><a href="https://ranbot.online/projects/bookmark-dashboard/index.html" target="_blank" rel="noopener">Bookmark Dashboard</a></li>
+            </ul>
+          </div>
+          <div class="group">
+            <p class="group-num">02</p>
+            <h3>AI-Powered Extraction</h3>
+            <ul>
+              <li><a href="https://viewer.ranbot.online/" target="_blank" rel="noopener">RanBOTer</a></li>
+              <li><a href="https://ranbot.online/projects/ranbot-ai-summarizer/index.html" target="_blank" rel="noopener">RanBOT AI Summarizer</a></li>
+              <li><a href="https://data-graph.ranbot.online" target="_blank" rel="noopener">Data Graph</a></li>
+            </ul>
+          </div>
+          <div class="group">
+            <p class="group-num">03</p>
+            <h3>Data &amp; Trends Aggregation</h3>
+            <ul>
+              <li><a href="https://hot-news.ranbot.online/" target="_blank" rel="noopener">Hot News</a></li>
+              <li><a href="https://github.ranbot.online/" target="_blank" rel="noopener">GitHub Trending Toolkit</a></li>
+              <li><a href="https://rss.ranbot.online" target="_blank" rel="noopener">AI RSS Reader</a></li>
+              <li><a href="https://github.com/ranbot-ai/tiktok-scraper" target="_blank" rel="noopener">TikTok Scraper</a></li>
+            </ul>
+          </div>
+          <div class="group">
+            <p class="group-num">04</p>
+            <h3>Content &amp; Documents</h3>
+            <ul>
+              <li><a href="https://ppt.ranbot.online/" target="_blank" rel="noopener">PPT Architect</a></li>
+              <li><a href="https://video.ranbot.online/" target="_blank" rel="noopener">Video Recorder</a></li>
+              <li><a href="https://github.com/encoreshao/nlm-unwatermark" target="_blank" rel="noopener">NLM Unwatermark</a></li>
+            </ul>
+          </div>
         </div>
+      </div>
     </section>
 
-    <hr class="section-divider" />
+    <section class="section">
+      <div class="wrap">
+        <p class="kicker">Why RanBOT Labs</p>
+        <h2>Built the way small, useful tools should be</h2>
 
-    <!-- Why RanBOT Labs -->
-    <section class="features">
-        <div class="section-inner">
-            <p class="section-label">Why RanBOT Labs</p>
-            <h2 class="section-heading">Built the way small, useful tools should be</h2>
-            <div class="features-grid">
-
-                <div class="feature-tile">
-                    <i class="fas fa-code-branch"></i>
-                    <h3>Open Source</h3>
-                    <p>Every product ships with public source on GitHub — inspect it, fork it, contribute to it.</p>
-                </div>
-
-                <div class="feature-tile">
-                    <i class="fas fa-gift"></i>
-                    <h3>Free to Use</h3>
-                    <p>No subscriptions, no paywalls — just tools you can install and use right away.</p>
-                </div>
-
-                <div class="feature-tile">
-                    <i class="fab fa-chrome"></i>
-                    <h3>Chrome-Native</h3>
-                    <p>Built as lightweight browser extensions and web apps, not bloated desktop software.</p>
-                </div>
-
-                <div class="feature-tile">
-                    <i class="fas fa-robot"></i>
-                    <h3>AI-Powered</h3>
-                    <p>AI/ML sits at the core of how each product turns raw web content into usable data.</p>
-                </div>
-
-            </div>
+        <div class="why-grid">
+          <article class="why-item">
+            <span class="mark" aria-hidden="true"></span>
+            <h3>Open Source</h3>
+            <p>Every product ships with public source on GitHub — inspect it, fork it, contribute to it.</p>
+          </article>
+          <article class="why-item">
+            <span class="mark" aria-hidden="true"></span>
+            <h3>Free to Use</h3>
+            <p>No subscriptions, no paywalls — just tools you can install and use right away.</p>
+          </article>
+          <article class="why-item">
+            <span class="mark" aria-hidden="true"></span>
+            <h3>Chrome-Native</h3>
+            <p>Built as lightweight browser extensions and web apps, not bloated desktop software.</p>
+          </article>
+          <article class="why-item">
+            <span class="mark" aria-hidden="true"></span>
+            <h3>AI-Powered</h3>
+            <p>AI/ML sits at the core of how each product turns raw web content into usable data.</p>
+          </article>
         </div>
+      </div>
     </section>
 
-    <hr class="section-divider" />
+    <section class="section">
+      <div class="wrap">
+        <p class="kicker">FAQ</p>
+        <h2>Questions about our AI-powered tools</h2>
 
-    <!-- AI Agents FAQ -->
-    <section class="faq">
-        <div class="section-inner">
-            <p class="section-label">FAQ</p>
-            <h2 class="section-heading">Questions about our AI-powered tools</h2>
-            <div class="faq-list">
-
-                <details class="faq-item">
-                    <summary>Are RanBOT Labs' tools free to use?</summary>
-                    <p>Yes, all six products are free, no subscriptions or paywalls.</p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>Do I need an account?</summary>
-                    <p>No account needed for most tools. RanBOT AI Summarizer is the one exception — it requires you to configure your own OpenAI API key in the extension settings.</p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>Which browsers are supported?</summary>
-                    <p>The four extensions (RanBOTer, Nexus Tab, Bookmark Dashboard, RanBOT AI Summarizer) are built for Chrome. Everything else — Hot News, GitHub Trending Toolkit, Data Graph, AI RSS Reader, PPT Architect, and Video Recorder — is a web app that works in any modern browser.</p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>How does the AI-powered extraction work?</summary>
-                    <p>Tools like RanBOTer use AI/ML to parse and normalize raw web content into structured data; RanBOT AI Summarizer calls the OpenAI API directly to summarize GitLab issues.</p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>Is RanBOT Labs open source?</summary>
-                    <p>Yes, every product ships with public source on GitHub.</p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>Where can I get help or report an issue?</summary>
-                    <p>Open an issue on the relevant product's GitHub repo, or reach out via the email in the footer.</p>
-                </details>
-
-            </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Are RanBOT Labs’ tools free to use?</summary>
+            <p>Yes, all products are free — no subscriptions or paywalls.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do I need an account?</summary>
+            <p>No account needed for most tools. RanBOT AI Summarizer is the one exception — it requires you to configure your own OpenAI API key in the extension settings.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Which browsers are supported?</summary>
+            <p>The four extensions (RanBOTer, Nexus Tab, Bookmark Dashboard, RanBOT AI Summarizer) are built for Chrome. Most other products are web apps that work in any modern browser. NLM Unwatermark is a Python CLI for PDF, PPTX, and image files.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How does the AI-powered extraction work?</summary>
+            <p>Tools like RanBOTer use AI/ML to parse and normalize raw web content into structured data; RanBOT AI Summarizer calls the OpenAI API directly to summarize GitLab issues.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is RanBOT Labs open source?</summary>
+            <p>Yes, every product ships with public source on GitHub.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Where can I get help or report an issue?</summary>
+            <p>Open an issue on the relevant product’s GitHub repo, or reach out via the email in the footer.</p>
+          </details>
         </div>
+      </div>
     </section>
 
-    <hr class="section-divider" />
-
-    <!-- Final CTA -->
-    <section class="final-cta">
-        <h2>Ready to try RanBOT Labs?</h2>
-        <a class="hero-btn" href="https://chromewebstore.google.com/detail/ranboter/nmdmfikkicpdphdnjgnhogdmeclobfjg" target="_blank" rel="noopener">
-            <i class="fab fa-chrome"></i> Install RanBOTer
-        </a>
-    </section>
-
-    <!-- Footer-->
-    <footer class="footer" id="contact">
-        <div class="footer-inner">
-            <div class="footer-columns">
-                <div>
-                    <h4>Products</h4>
-                    <ul>
-                        <li><a href="https://viewer.ranbot.online/" target="_blank" rel="noopener">RanBOTer</a></li>
-                        <li><a href="./projects/nexus-tab/index.html" target="_blank">Nexus Tab</a></li>
-                        <li><a href="./projects/bookmark-dashboard/index.html" target="_blank">Bookmark Dashboard</a></li>
-                        <li><a href="./projects/ranbot-ai-summarizer/index.html" target="_blank">RanBOT AI Summarizer</a></li>
-                        <li><a href="https://hot-news.ranbot.online/" target="_blank" rel="noopener">Hot News</a></li>
-                        <li><a href="https://github.ranbot.online/" target="_blank" rel="noopener">GitHub Trending Toolkit</a></li>
-                        <li><a href="https://data-graph.ranbot.online" target="_blank" rel="noopener">Data Graph</a></li>
-                        <li><a href="https://rss.ranbot.online" target="_blank" rel="noopener">AI RSS Reader</a></li>
-                        <li><a href="https://ppt.ranbot.online/" target="_blank" rel="noopener">PPT Architect</a></li>
-                        <li><a href="https://video.ranbot.online/" target="_blank" rel="noopener">Video Recorder</a></li>
-                        <li><a href="https://github.com/ranbot-ai/tiktok-scraper" target="_blank" rel="noopener">TikTok Scraper</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="https://github.com/ranbot-ai/" target="_blank" rel="noopener">GitHub</a></li>
-                        <li>Shanghai, China</li>
-                        <li>encore.shao[at]gmail.com</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="social">
-                    <a href="https://www.linkedin.com/company/ranbot-ai" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://x.com/ranbotai" target="_blank" rel="noopener" aria-label="X"><i class="fab fa-twitter"></i></a>
-                    <a href="https://github.com/ranbot-ai/" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                </div>
-                <div class="small">Copyright &copy; RanBOT Labs 2026</div>
-            </div>
+    <section class="cta-band">
+      <div class="wrap cta-grid">
+        <div>
+          <p class="kicker">Get started</p>
+          <h2>Start with a tool. Skip the signup.</h2>
+          <p class="cta-lead">Install RanBOTer in Chrome — or pick any of the twelve tools above. No account required.</p>
+          <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/ranboter/nmdmfikkicpdphdnjgnhogdmeclobfjg" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2zm0 2.2a7.8 7.8 0 0 1 6.66 3.8H12A3.99 3.99 0 0 0 8.2 10.4L5.54 5.8A7.78 7.78 0 0 1 12 4.2zm-7.8 7.8c0-.86.14-1.69.4-2.46L8.2 13.6A4 4 0 0 0 12 16.8c.9 0 1.73-.3 2.4-.8l2.66 4.6A7.8 7.8 0 0 1 4.2 12zm9.8 4.6A4 4 0 0 0 16 12h5.8A7.8 7.8 0 0 1 16.4 19.4L14 16.6z"/></svg>
+            Install RanBOTer
+          </a>
         </div>
-    </footer>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
-    <script src="js/fontawesome-all.js"></script>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NPPTFGK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J34EKX0755"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+        <aside class="cta-panel" aria-label="Ways to start">
+          <div class="clone-bar">
+            <code id="clone-cmd">git clone https://github.com/ranbot-ai</code>
+            <button class="clone-copy" type="button" data-copy="git clone https://github.com/ranbot-ai" aria-label="Copy clone command">Copy</button>
+          </div>
+          <ol class="cta-paths">
+            <li>
+              <span class="cta-num">01</span>
+              <div>
+                <h3>Chrome</h3>
+                <p>Install RanBOTer and extract pages as you browse.</p>
+              </div>
+            </li>
+            <li>
+              <span class="cta-num">02</span>
+              <div>
+                <h3>Web apps</h3>
+                <p>Open Hot News, GitHub Trending, PPT Architect, and the rest — no install.</p>
+                <a href="#products">Browse the catalog</a>
+              </div>
+            </li>
+            <li>
+              <span class="cta-num">03</span>
+              <div>
+                <h3>Source</h3>
+                <p>Every tool is public. Fork what you need.</p>
+                <a href="https://github.com/ranbot-ai/" target="_blank" rel="noopener">github.com/ranbot-ai</a>
+              </div>
+            </li>
+          </ol>
+        </aside>
+      </div>
+    </section>
+  </main>
 
-        gtag('config', 'G-J34EKX0755');
-    </script>
+  <footer class="footer" id="contact">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="#page-top">
+            <img src="assets/img/icon48.png" width="32" height="32" alt="RanBOT Labs" />
+            <span class="brand-name">RanBOT Labs</span>
+          </a>
+          <p>Small, focused AI tools that turn the noisy web into clean, usable data.</p>
+        </div>
+        <div>
+          <h4>Products</h4>
+          <ul>
+            <li><a href="https://viewer.ranbot.online/" target="_blank" rel="noopener">RanBOTer</a></li>
+            <li><a href="https://ranbot.online/projects/nexus-tab/index.html" target="_blank" rel="noopener">Nexus Tab</a></li>
+            <li><a href="https://ranbot.online/projects/bookmark-dashboard/index.html" target="_blank" rel="noopener">Bookmark Dashboard</a></li>
+            <li><a href="https://ranbot.online/projects/ranbot-ai-summarizer/index.html" target="_blank" rel="noopener">RanBOT AI Summarizer</a></li>
+            <li><a href="https://hot-news.ranbot.online/" target="_blank" rel="noopener">Hot News</a></li>
+            <li><a href="https://github.ranbot.online/" target="_blank" rel="noopener">GitHub Trending Toolkit</a></li>
+            <li><a href="https://data-graph.ranbot.online" target="_blank" rel="noopener">Data Graph</a></li>
+            <li><a href="https://rss.ranbot.online" target="_blank" rel="noopener">AI RSS Reader</a></li>
+            <li><a href="https://ppt.ranbot.online/" target="_blank" rel="noopener">PPT Architect</a></li>
+            <li><a href="https://video.ranbot.online/" target="_blank" rel="noopener">Video Recorder</a></li>
+            <li><a href="https://github.com/encoreshao/nlm-unwatermark" target="_blank" rel="noopener">NLM Unwatermark</a></li>
+            <li><a href="https://github.com/ranbot-ai/tiktok-scraper" target="_blank" rel="noopener">TikTok Scraper</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="https://github.com/ranbot-ai/" target="_blank" rel="noopener">GitHub</a></li>
+            <li>
+              <address class="plain" itemscope itemtype="https://schema.org/PostalAddress">
+                <span itemprop="addressLocality">Shanghai</span>,
+                <span itemprop="addressCountry">China</span>
+              </address>
+            </li>
+            <li><span class="plain">encore.shao[at]gmail.com</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="social">
+          <a href="https://www.linkedin.com/company/ranbot-ai" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.5 9H3v12h3.5V9zM4.75 3C3.5 3 2.5 4 2.5 5.25S3.5 7.5 4.75 7.5 7 6.5 7 5.25 6 3 4.75 3zM21 12.5c0-2.6-1.7-4-4.1-4-1.8 0-2.7.9-3.2 1.6V9H10.3c0 1.7 0 12 0 12H13.8v-6.7c0-.4 0-.7.1-1 .3-.7.9-1.4 2-1.4 1.4 0 2 1.1 2 2.6V21H21v-8.5z"/></svg>
+          </a>
+          <a href="https://x.com/ranbotai" target="_blank" rel="noopener" aria-label="X">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14.7 10.3 22 2h-2.2l-6.4 7.2L8.3 2H2l7.7 11L2 22h2.2l7-7.9L15.7 22H22l-7.3-11.7zm-2.5 2.8-.8-1.1L5 3.5h2.7l5.1 7.2.8 1.1 6.6 9.2h-2.7l-5.3-7.9z"/></svg>
+          </a>
+          <a href="https://github.com/ranbot-ai/" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.35 6.84 9.71.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.1-1.5-1.1-1.5-.9-.64.07-.62.07-.62 1 .07 1.52 1.06 1.52 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 6.84c.85.01 1.71.12 2.51.34 1.9-1.32 2.74-1.05 2.74-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.04 10.04 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/></svg>
+          </a>
+        </div>
+        <p class="copy">Copyright © RanBOT Labs 2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
-
 </html>

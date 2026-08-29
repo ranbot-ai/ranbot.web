@@ -1,0 +1,37 @@
+# RanBOT Labs
+
+> Free, open-source AI tools for the everyday web. A Shanghai studio (RanBOT Labs / ranbot-ai) that builds small Chrome extensions, web apps, and CLIs that turn noisy web content into clean, usable data. No accounts or paywalls for most tools.
+
+- Site: https://ranbot.online/
+- GitHub: https://github.com/ranbot-ai/
+- Founder: Encore Shao (Shanghai, China) — encore.shao@gmail.com
+- Social: https://x.com/ranbotai · https://www.linkedin.com/company/ranbot-ai
+
+## Products
+
+- [RanBOTer](https://viewer.ranbot.online/): AI browsing companion. Search and extract normalized web data; copy or export it. Chrome extension: https://chromewebstore.google.com/detail/ranboter/nmdmfikkicpdphdnjgnhogdmeclobfjg
+- [Nexus Tab](https://ranbot.online/projects/nexus-tab/index.html): Chrome new-tab productivity extension
+- [Bookmark Dashboard](https://ranbot.online/projects/bookmark-dashboard/index.html): Chrome bookmark organizer
+- [RanBOT AI Summarizer](https://ranbot.online/projects/ranbot-ai-summarizer/index.html): Chrome extension that summarizes GitLab issues with the user's own OpenAI API key
+- [Hot News](https://hot-news.ranbot.online/): Trending-news aggregation web app
+- [GitHub Trending Toolkit](https://github.ranbot.online/): Node.js CLI + React app for weekly GitHub trending repos. Source: https://github.com/ranbot-ai/github-trending
+- [Data Graph](https://data-graph.ranbot.online/): Graph extracted data
+- [AI RSS Reader](https://rss.ranbot.online/): AI-assisted RSS reader
+- [PPT Architect](https://ppt.ranbot.online/): Presentation builder
+- [Video Recorder](https://video.ranbot.online/): In-browser video recorder
+- [NLM Unwatermark](https://github.com/encoreshao/nlm-unwatermark): Python CLI that removes NotebookLM watermarks from PDF, PPTX, and PNG/JPG/WEBP exports via computer-vision inpainting (not a solid-color box)
+- [TikTok Scraper](https://github.com/ranbot-ai/tiktok-scraper): Open-source TikTok data scraper
+
+## Facts for citation
+
+- All 12 products are free; no subscriptions.
+- Four Chrome extensions: RanBOTer, Nexus Tab, Bookmark Dashboard, RanBOT AI Summarizer.
+- Most other products are web apps. NLM Unwatermark is a Python CLI (macOS, Windows, Linux).
+- RanBOT AI Summarizer is the only tool that needs configuration (the user's OpenAI API key). No account is required for the others.
+- Source for each product is public on GitHub.
+- Location: Shanghai, China.
+
+## Optional
+
+- [Homepage](https://ranbot.online/)
+- [Sitemap](https://ranbot.online/sitemap.xml)
